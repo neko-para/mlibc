@@ -1,0 +1,16 @@
+[host_machine]
+system = 'nyan'
+cpu_family = 'x86'
+cpu = 'x86'
+endian = 'little'
+[binaries]
+c = '/opt/llvm-nyan/bin/clang'
+cpp = '/opt/llvm-nyan/bin/clang++'
+ar = '/opt/llvm-nyan/bin/llvm-ar'
+strip = '/opt/llvm-nyan/bin/llvm-strip'
+ld = '/opt/llvm-nyan/bin/ld.lld'
+[built-in options]
+c_args = ['--target=i686-unknown-nyan-mlibc', '--sysroot=/Users/nekosu/Documents/Projects/nyan/sysroot-user']
+cpp_args = ['--target=i686-unknown-nyan-mlibc', '--sysroot=/Users/nekosu/Documents/Projects/nyan/sysroot-user']
+c_link_args = ['-L/opt/llvm-nyan/lib/clang/22/lib/i686-unknown-nyan-mlibc']
+cpp_link_args = ['-L/opt/llvm-nyan/lib/clang/22/lib/i686-unknown-nyan-mlibc']
